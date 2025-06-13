@@ -24,8 +24,6 @@ export const AddPost = async (Content, SetPosts) => {
       await Response.json();
       return;
     }
-
-    await FetchPosts(SetPosts);
   } catch {
     return;
   }
@@ -75,8 +73,6 @@ export const DeletePost = async (PostId, SetPosts) => {
     });
 
     if (!Response.ok) return;
-
-    await FetchPosts(SetPosts);
   } catch {
     return;
   }
