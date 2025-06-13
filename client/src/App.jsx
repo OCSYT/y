@@ -78,6 +78,16 @@ function App() {
     <Router>
       <Routes>
         <Route
+          path="/*"
+          element={
+            <RequireAuth>
+              <AuthLayout>
+                <Posts />
+              </AuthLayout>
+            </RequireAuth>
+          }
+        />
+        <Route
           path="/register"
           element={
             <RedirectIfAuth>
@@ -111,16 +121,6 @@ function App() {
             <RequireAuth>
               <AuthLayout>
                 <AccountManagement />
-              </AuthLayout>
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/"
-          element={
-            <RequireAuth>
-              <AuthLayout>
-                <Posts />
               </AuthLayout>
             </RequireAuth>
           }
