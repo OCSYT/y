@@ -17,7 +17,7 @@ const DatabasePool = new Pool({
     connectionString: process.env.DATABASE_URL,
 })
 
-App.use(Cors())
+App.use(Cors({ origin: true, credentials: true }))
 App.use(Express.json())
 
 const EmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
