@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body.light-mode {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #fff !important;
+}
+
+
+body.light-mode img {
+    filter: invert(1) hue-rotate(180deg);
+}
