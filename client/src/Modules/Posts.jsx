@@ -253,7 +253,7 @@ export default function Posts() {
 
     SearchTimeout.current = setTimeout(() => {
       FetchPosts(SetPosts, SearchTerm);
-    }, 250);
+    }, 500);
 
     return () => clearTimeout(SearchTimeout.current);
   }, [SearchTerm, SetPosts]);
@@ -261,7 +261,7 @@ export default function Posts() {
   useEffect(() => {
     const IntervalId = setInterval(() => {
       FetchPosts(SetPosts, SearchTerm);
-    }, 250);
+    }, 500);
 
     return () => clearInterval(IntervalId);
   }, [SearchTerm, SetPosts]);
